@@ -2,9 +2,8 @@
 using Lab9.Methods;
 using Lab9.Service;
 using var context = new SchoolDbContext();
-
-//var studentService = new StudentService(context);
-
+var studentService = new StudentService(context);
+#region
 //var newStudent = new Student
 //{
 //    FirstName = "Rasul",
@@ -50,11 +49,64 @@ using var context = new SchoolDbContext();
 //Console.WriteLine("Student created successfully.");
 //await studentService.CreateStudentAsync(newStudent5);
 //Console.WriteLine("Student created successfully.");
-var studentService = new StudentService(context);
-var students = await studentService.GetAllStudentsAsync();
-foreach (var student in students)
-{
+#endregion
 
-    Console.WriteLine($"Student: {student.FirstName} {student.LastName}, Age: {student.Age}, Email: {student.Email}");
-}
+#region
+//var students = await studentService.GetAllStudentsAsync();
+//foreach (var student in students)
+//{
 
+//    Console.WriteLine($"Student: {student.FirstName} {student.LastName}, Age: {student.Age}, Email: {student.Email}");
+//}
+#endregion
+#region
+//var studentsOlderThan18 = await studentService.GetStudentsOlder18Async();
+//foreach (var student in studentsOlderThan18)
+//{
+//    Console.WriteLine($"Student: {student.FirstName} {student.LastName}, Age: {student.Age}, Email: {student.Email}");
+//}
+#endregion
+#region
+//var studentsOrderByName = await studentService.GetStudentsOrderByNameAsync();
+//foreach (var student in studentsOrderByName)
+//{
+//    Console.WriteLine($"Student: {student.FirstName} {student.LastName}, Age: {student.Age}, Email: {student.Email}");
+//}
+#endregion
+
+#region
+//var top3OldestStudents = await studentService.GetTop3OldestStudentsAsync();
+//foreach (var student in top3OldestStudents)
+//{
+//    Console.WriteLine($"Student: {student.FirstName} {student.LastName}, Age: {student.Age}, Email: {student.Email}");
+//}
+#endregion
+
+#region
+//var student = await studentService.GetStudentByNameAsync("Rasul");
+//if (student != null)
+//{
+//    Console.WriteLine($"Student: {student.FirstName} {student.LastName}, Age: {student.Age}, Email: {student.Email}");
+//}
+#endregion
+
+#region
+//var studentCount = await studentService.GetStudentCountAsync();
+//Console.WriteLine($"Total number of students: {studentCount}");
+#endregion
+
+#region
+//var studentsByAgeRange = await studentService.GetStudentsByAgeRangeAsync();
+//foreach (var student in studentsByAgeRange)
+//{
+//    Console.WriteLine($"Student: {student.FirstName} {student.LastName}, Age: {student.Age}, Email: {student.Email}");
+//}
+#endregion
+
+#region
+//var studentsByEmailDomain = await studentService.GetStudentsByEmailDomainAsync("@gmail.com");
+//foreach (var student in studentsByEmailDomain)
+//{
+//    Console.WriteLine($"Student: {student.FirstName} {student.LastName}, Age: {student.Age}, Email: {student.Email}");
+//}
+#endregion
