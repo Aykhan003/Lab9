@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Lab9.Data;
 
-internal class SchoolDbContext:DbContext
+public class SchoolDbContext:DbContext
 {
     override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
